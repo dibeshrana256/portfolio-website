@@ -2,6 +2,7 @@ const path = require("path");
 
 module.exports = {
   swcMinify: true, // Enables Next.js's faster, smaller minification
+  output: "export", // Ensures static export to "out" folder
 
   webpack: (config, { isServer }) => {
     if (isServer) {
@@ -13,7 +14,6 @@ module.exports = {
       };
     }
 
-    // Enable splitChunks to reduce bundle sizes
     config.optimization.splitChunks = {
       chunks: "all",
     };
