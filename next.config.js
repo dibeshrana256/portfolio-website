@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   swcMinify: true, // Enables Next.js's faster, smaller minification
-  output: "export", // Ensures static export to "out" folder
+  output: "export", // Specifies static export
 
   webpack: (config, { isServer }) => {
     if (isServer) {
