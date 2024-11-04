@@ -1,9 +1,11 @@
 const path = require("path");
 
 module.exports = {
-  swcMinify: true, // Enables Next.js's faster, smaller minification
-  output: "export", // Specifies static export
-
+  swcMinify: true, 
+  output: "export",
+  images: {
+    unoptimized: true, // Disables Next.js image optimization for static export
+  },
   webpack: (config, { isServer }) => {
     if (isServer) {
       config.cache = {
