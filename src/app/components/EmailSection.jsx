@@ -7,6 +7,7 @@ import Image from "next/image";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -81,7 +82,6 @@ const EmailSection = () => {
           <div className="mb-6">
             <label
               htmlFor="subject"
-              type="email"
               className="text-white block mb-2 text-sm font-medium"
             >
               Subject
@@ -115,6 +115,15 @@ const EmailSection = () => {
           >
             Send Message
           </button>
+
+          {
+            //If the email was submitted successfully, show a success message
+            emailSubmitted && (
+              <p className="text-green-500 text-sm mt-2">
+                Email submitted successfully!
+              </p>
+            )
+          }
         </form>
       </div>
     </section>
