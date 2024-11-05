@@ -1,15 +1,19 @@
 // Import Resend and initialize with the API key
 import { Resend } from "resend";
+import { NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.FROM_EMAIL;
 
 export async function POST(req) {
   try {
-    const body = await req.json();
-    const { email, subject, message } = body;
+    const body = await req.formData();
+    // const { email, subject, message } = body;
 
-    console.log("hello world");
+    const email = body.get("email");
+    const subject = body.get("subject");
+    const message = body.get("message");
+    
 
     const { data, error } = await resend.emails.send({
       from: fromEmail,
@@ -34,3 +38,4 @@ export async function POST(req) {
     return new Response(JSON.stringify({ error: error.message }), { status: 500 });
   }
 }
+
