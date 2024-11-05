@@ -9,6 +9,8 @@ export async function POST(req) {
     const body = await req.json();
     const { email, subject, message } = body;
 
+    console.log("hello world");
+
     const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: ["dibeshrana.dr+resend@gmail.com", email],
