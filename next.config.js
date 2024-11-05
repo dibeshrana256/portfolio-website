@@ -1,25 +1,19 @@
-const path = require("path");
+// next.config.js
 
-module.exports = {
-  swcMinify: true, 
-  output: "export",
-  images: {
-    unoptimized: true, // Disables Next.js image optimization for static export
-  },
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      config.cache = {
-        type: "filesystem",
-        cacheDirectory: path.resolve(".next/cache"),
-        compression: "gzip",
-        maxMemoryGenerations: 1,
-      };
-    }
-
-    config.optimization.splitChunks = {
-      chunks: "all",
-    };
-
-    return config;
+const nextConfig = {
+  output: 'standalone',
+  reactStrictMode: false,
+  // images: {
+  //   remotePatterns: [
+  //     {
+  //       protocol: 'https',
+  //       hostname: process.env.API_URL,
+  //     },
+  //   ],
+  // },
+  httpAgentOptions: {
+    keepAlive: true,
   },
 };
+
+module.exports = nextConfig;

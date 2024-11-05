@@ -7,12 +7,8 @@ const fromEmail = "portfolio@drhomelabs.com";
 
 export async function POST(req) {
   try {
-    const body = await req.formData();
-    // const { email, subject, message } = body;
-
-    const email = body.get("email");
-    const subject = body.get("subject");
-    const message = body.get("message");
+    const body = await req.json();
+    const { email, subject, message } = body;
     
 
     const { data, error } = await resend.emails.send({
