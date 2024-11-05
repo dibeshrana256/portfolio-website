@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy": "rm -rf .next/cache",
+    "deploy": "npm run predeploy && npx @cloudflare/next-on-pages@1",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
     "preview": "npm run pages:build && wrangler pages dev",
-    "deploy": "npx @cloudflare/next-on-pages@1",
     "vercel-build": "next build --no-lint"
   },
   "dependencies": {
