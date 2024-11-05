@@ -2,8 +2,8 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const fromEmail = process.env.FROM_EMAIL;
+const resend = new Resend("re_Js3QSKbD_Bx9gv866CMxSKH7mYMu6Ces5");
+const fromEmail = "portfolio@drhomelabs.com";
 
 export async function POST(req) {
   try {
