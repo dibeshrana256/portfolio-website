@@ -11,7 +11,7 @@
     "lint": "next lint",
     "pages:build": "npx @cloudflare/next-on-pages",
     "preview": "npm run pages:build && wrangler pages dev",
-    "vercel-build": "next build --no-lint --production-browser-source-maps=false"
+    "vercel-build": "next build --no-lint"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",

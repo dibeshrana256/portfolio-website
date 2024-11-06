@@ -5,6 +5,8 @@
 const nextConfig = {
   output: "standalone",
   reactStrictMode: false,
+  compress: true,
+  productionBrowserSourceMaps: false, // Disables source maps in production
   httpAgentOptions: {
     keepAlive: true,
   },
