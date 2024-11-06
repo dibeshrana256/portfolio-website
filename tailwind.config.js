@@ -14,7 +14,7 @@ module.exports = {
         foreground: "var(--foreground)",
       },
     },
-    colors:{
+    colors: {
       ...colors,
       primary: colors.blue,
       secondary: colors.green,
