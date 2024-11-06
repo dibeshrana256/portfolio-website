@@ -5,6 +5,8 @@
 const nextConfig = {
   output: "standalone",
   reactStrictMode: false,
+  compress: true,
+  productionBrowserSourceMaps: false,
   httpAgentOptions: {
     keepAlive: true,
   },
