@@ -15,7 +15,7 @@ const nextConfig = {
 
   webpack: (config, { isServer }) => {
     // Client-side specific configuration
-    if (!isServer) {
+    if (!isServer && config.optimization.splitChunks.cacheGroups) {
       config.optimization.splitChunks.cacheGroups.default = false;
     }
 
