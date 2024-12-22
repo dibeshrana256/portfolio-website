@@ -7,11 +7,11 @@ import { animate, motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
+    title: "Next.js Portfolio Website",
+    description: "Portfolio website built using next.js and resend",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/dibeshrana256/portfolio-website",
     previewUrl: "/",
   },
   {
@@ -25,11 +25,11 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "Banking application",
+    description: "Project done in Java and Springboot.",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/dibeshrana256/online-banking-parent",
     previewUrl: "/",
   },
   {
@@ -43,12 +43,12 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
+    title: "Book Sharing app",
+    description: "Authentication and CRUD operations using Firebase and React",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/dibeshrana256/share-a-book",
+    previewUrl: "https://share-a-book.vercel.app/",
   },
   {
     id: 6,
